@@ -2,7 +2,7 @@
 title: India Debt Rights Navigator
 emoji: ⚖️
 colorFrom: green
-colorTo: teal
+colorTo: red
 sdk: docker
 pinned: false
 license: mit
