@@ -1,0 +1,88 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environments
+venv/
+.env/
+.env.bak/
+.venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# -------------------------
+# Environment Variables
+# -------------------------
+# DO NOT COMMIT SECRETS
+.env
+*.env
+
+# -------------------------
+# Streamlit
+# -------------------------
+.streamlit/
+**/.streamlit/
+
+# -------------------------
+# FastAPI / Uvicorn
+# -------------------------
+*.sqlite
+*.db
+
+# -------------------------
+# Cache & Build Artifacts
+# -------------------------
+.cache/
+build/
+dist/
+pip-wheel-metadata/
+poetry.lock
+
+# -------------------------
+# Jupyter (if used)
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# OS-specific
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Editors / IDEs
+# -------------------------
+.vscode/
+.vscode/*
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# Docker
+# -------------------------
+# Ignore Docker build layers
+**/.dockerignore
+docker-compose.override.yml
+docker-data/
+docker-cache/
+*.tar
+
+# -------------------------
+# HuggingFace Spaces
+# -------------------------
+hf_cache/
+huggingface/

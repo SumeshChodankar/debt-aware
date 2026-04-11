@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "india_debt_rights_ai"
+version = "1.0.0"
+description = "India Debt Rights Navigator — RBI-grounded RL environment for borrower protection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.12.0",
+    "pydantic>=2.0.0",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "httpx>=0.27.0",
+    "streamlit",
+    "openenv-core>=0.2.0",
+]
+
+[project.scripts]
+server = "server.main:main"

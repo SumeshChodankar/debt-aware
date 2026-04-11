@@ -1,0 +1,26 @@
+spec_version: 1
+name: IndiaDebtRightsAI
+type: space
+runtime: fastapi
+app: server.main:app
+port: 7860
+
+tasks:
+  - id: stop_harassment
+    difficulty: easy
+    grader: engine.tasks.RBIGrader.grade_easy
+  - id: file_rbi_complaint
+    difficulty: medium
+    grader: engine.tasks.RBIGrader.grade_medium
+  - id: negotiate_and_protect_cibil
+    difficulty: hard
+    grader: engine.tasks.RBIGrader.grade_hard
+  - id: illegal_app_takedown
+    difficulty: expert
+    grader: engine.tasks.RBIGrader.grade_expert
+  - id: cooling_off_cancellation
+    difficulty: medium
+    grader: engine.tasks.RBIGrader.grade_cooling_off
+  - id: kfs_violation_dispute
+    difficulty: medium
+    grader: engine.tasks.RBIGrader.grade_kfs_violation

@@ -1,0 +1,122 @@
+{
+  "situation_to_task": {
+    "illegal_app": "expert",
+    "bank_high_harassment": "medium",
+    "nbfc_high_harassment": "easy",
+    "bank_large_debt": "hard",
+    "nbfc_large_debt": "hard",
+    "mfi": "medium",
+    "default": "easy"
+  },
+  "classifier_rules": [
+    {
+      "condition": "lender_type == 'illegal_app'",
+      "task": "expert",
+      "reason": "Illegal apps require police + cybercrime complaints, not negotiation."
+    },
+    {
+      "condition": "harassment_level > 0.7 and days_overdue < 30",
+      "task": "easy",
+      "reason": "Early-stage severe harassment — stop it fast with documentation + notice."
+    },
+    {
+      "condition": "debt_amount > 50000 and lender_type in ['bank','nbfc']",
+      "task": "hard",
+      "reason": "Large debt — settlement negotiation + CIBIL protection needed."
+    },
+    {
+      "condition": "complaint_filed == False and days_overdue > 30",
+      "task": "medium",
+      "reason": "Overdue without complaint — Ombudsman path is highest leverage."
+    },
+    {
+      "condition": "default",
+      "task": "easy",
+      "reason": "Start with harassment documentation and written notice."
+    }
+  ],
+  "tasks": {
+    "easy": {
+      "best_sequence": [
+        "document_violations",
+        "file_rbi_complaint",
+        "send_written_notice",
+        "escalate_to_ombudsman"
+      ],
+      "best_score": 0.95,
+      "avg_score": 0.95,
+      "pass_rate": 1.0,
+      "episodes_run": 3,
+      "prohibited_actions": [],
+      "timing_rules": [
+        "Document violations FIRST — harassment grader needs evidence before complaint is valid.",
+        "Do NOT use negotiate_settlement — grader measures harassment, not debt reduction.",
+        "file_rbi_complaint drops harassment -0.15, send_written_notice drops -0.20, escalate_to_ombudsman drops -0.25."
+      ],
+      "why": "For NBFC harassment at moderate severity: document first (builds evidence), file RBI complaint (triggers mandatory investigation), then written notice (formal paper trail). Harassment drops fastest when legal footing is established early."
+    },
+    "medium": {
+      "best_sequence": [
+        "send_written_notice",
+        "file_rbi_complaint",
+        "escalate_to_ombudsman",
+        "document_violations",
+        "document_violations"
+      ],
+      "best_score": 0.95,
+      "avg_score": 0.95,
+      "pass_rate": 1.0,
+      "episodes_run": 3,
+      "prohibited_actions": [],
+      "timing_rules": [
+        "File complaint with lender BEFORE escalating — Ombudsman requires complaint_filed=True.",
+        "Use escalate_to_ombudsman immediately after complaint_filed becomes True in the observation.",
+        "Do not re-document after complaint is filed — every wasted step costs ombudsman eligibility."
+      ],
+      "why": "For bank ignoring borrower: the Ombudsman is the most powerful tool (₹20 lakh award) but requires a prior complaint + 30-day wait. Every step must build toward ombudsman_eligible=True. Re-documenting after complaint_filed wastes the step — escalate immediately."
+    },
+    "hard": {
+      "best_sequence": [
+        "negotiate_settlement",
+        "negotiate_settlement",
+        "document_violations",
+        "file_rbi_complaint",
+        "escalate_to_ombudsman"
+      ],
+      "best_score": 0.95,
+      "avg_score": 0.95,
+      "pass_rate": 1.0,
+      "episodes_run": 3,
+      "prohibited_actions": [],
+      "timing_rules": [
+        "Use negotiate_settlement TWICE — each use reduces remaining debt by 25% (NBFC rate).",
+        "Cumulative reduction after 2x negotiate: 44% total — above the 35% needed to pass.",
+        "File complaint + escalate AFTER negotiating — escalate_to_ombudsman improves CIBIL from high to medium."
+      ],
+      "why": "For large NBFC debt with CIBIL at risk: negotiate settlement TWICE before complaining (each pass cuts debt ~25%). Then file complaint and escalate to Ombudsman — escalation after complaint triggers CIBIL impact improvement from 'high' to 'medium'."
+    },
+    "expert": {
+      "best_sequence": [
+        "file_police_complaint",
+        "document_violations",
+        "file_rbi_complaint",
+        "document_violations",
+        "escalate_to_ombudsman",
+        "document_violations",
+        "escalate_to_ombudsman"
+      ],
+      "best_score": 0.95,
+      "avg_score": 0.935,
+      "pass_rate": 0.67,
+      "episodes_run": 3,
+      "prohibited_actions": [],
+      "timing_rules": [
+        "Never use negotiate_settlement — illegal apps have no RBI registration to negotiate against.",
+        "file_rbi_complaint MUST come before escalate_to_ombudsman — ombudsman needs complaint_filed=True.",
+        "Alternate file_police_complaint with document_violations — need violations_documented >= 3 to pass.",
+        "Optimal order: police → doc → file_rbi → doc → police → doc → escalate."
+      ],
+      "why": "For illegal apps: police complaint is the most effective single action (triggers 70% debt waiver in simulation). But the pass condition also requires violations_documented >= 3, so alternate police_complaint → document_violations → police_complaint. Never negotiate — illegal apps have no RBI standing."
+    }
+  }
+}

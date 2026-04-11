@@ -1,0 +1,25 @@
+{
+    "RBI_Digital_Lending_Directions_2025": "RBI (Digital Lending) Directions 2025 (effective May 8, 2025) REPLACED all 2022 guidelines. Key borrower rights: (1) Mandatory Key Fact Statement (KFS) showing ALL charges before loan approval — no charges can be added later. (2) 3-day cooling-off period — cancel within 3 days paying only proportionate interest, no penalty. (3) Funds must go directly to borrower's bank account — apps routing through wallets is now illegal. (4) Lender is fully liable for all LSP/app actions — 'speak to the app not us' is not permitted. (5) Data only with explicit consent, stored in India, deleted within 24 hours if processed externally.",
+
+    "RBI_DLA_Directory_2025": "RBI launched official Digital Lending Apps (DLA) Directory on July 1, 2025 at rbi.org.in. Any app NOT listed is unregistered and illegal. Unregistered apps have no legal right to collect debt, contact your family, or report to CIBIL. Report illegal apps via National Cybercrime Reporting Portal or helpline 1930. MeitY blocks apps under Section 69A of IT Act 2000 — report via sachet.rbi.org.in.",
+
+    "RBI_Fair_Practices_Code": "RBI Fair Practices Code (updated 2025): Recovery agents may only contact borrowers between 7am–7pm. Abusive language, threats, and public shaming are strictly prohibited. Agents must carry bank-issued ID cards. Under 2025 Directions, lender must notify borrower via email/SMS with agent name and details BEFORE any recovery agent visits. Banks face penalties up to Rs 1 crore per violation. File complaints at cms.rbi.org.in.",
+
+    "RBI_Ombudsman": "RBI Integrated Ombudsman Scheme: File at cms.rbi.org.in after lender fails to resolve within 30 days. Ombudsman can award up to Rs 20 lakh compensation plus Rs 1 lakh for mental stress. Free, no lawyer required. Also report to SACHET portal (sachet.rbi.org.in) for illegal lending. Helpline: 1930.",
+
+    "RBI_Recovery_Guidelines": "RBI 2025 recovery rules: Loan default is a civil matter — agents CANNOT threaten arrest or criminal action. Cannot contact employer, relatives, or neighbours without consent. Cannot visit without prior SMS/email notice with agent details. Borrower can demand all communication in writing. Auto-deducted platform fees or collection charges not listed in KFS are now explicitly prohibited.",
+
+    "KFS_Violation_Rights": "Key Fact Statement (KFS) violation — new right under 2025 Directions: If lender did not provide a KFS before disbursement, or charged fees not listed in the KFS, the borrower can dispute the entire charge. Write to lender's Grievance Officer demanding the original KFS. If not provided within 7 days, escalate to RBI CMS portal citing RBI (Digital Lending) Directions 2025, Section 8. Undisclosed charges are unenforceable.",
+
+    "Cooling_Off_Right": "3-day cooling-off right (new under 2025 Directions): Borrower can cancel any digital loan within 3 days of disbursement by paying only principal plus proportionate interest — no penalty, no processing fee retention. For 7-day loans, cooling-off is 1 day. Lender MUST honour this — refusal is a violation reportable to RBI CMS. This right applies even after the money has been spent.",
+
+    "IPC_Section_506": "Indian Penal Code Section 506 — Criminal Intimidation: Threats, abusive language, or intimidation by recovery agents is punishable with up to 2 years imprisonment. File FIR at local police station or online at cybercrime.gov.in. Helpline: 1930. Keep call recordings and screenshots as evidence.",
+
+    "IT_Act_66E": "IT Act Section 66E — Privacy Violation: Accessing or transmitting private information (contacts, photos, call logs) without consent is punishable with up to 3 years imprisonment and Rs 2 lakh fine. Under DPDP Act 2023, apps must have explicit consent for each data type — revoking consent is a legal right. File complaint at cybercrime.gov.in and report app to Google Play.",
+
+    "Consumer_Protection_Act_2019": "Consumer Protection Act 2019: File complaints at edaakhil.nic.in against banks and NBFCs for harassment and unfair practices. Courts have awarded Rs 50,000–Rs 5,00,000 for mental agony. Under 2025 Directions, the lender is fully liable for app/LSP actions — the bank cannot deflect to the app.",
+
+    "SARFAESI_Act": "SARFAESI Act 2002: Banks can seize secured assets only after 60-day notice. Asset seizure without court order for unsecured loans (personal loans, credit cards, app loans) is completely illegal. Recovery agents cannot physically take property without SARFAESI notice and court order. File police complaint immediately if agents attempt physical seizure.",
+
+    "CIBIL_Rights_2025": "CIBIL rights: Illegal/unregistered apps are NOT connected to CIBIL — non-payment does NOT affect credit score. Dispute wrong entries free at cibil.com — lender must correct within 30 days or face RBI action. Under 2025 Directions, incorrect CIBIL reporting is a violation reportable to RBI CMS portal."
+}
