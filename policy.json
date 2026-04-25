@@ -41,10 +41,11 @@
         "document_violations",
         "file_rbi_complaint",
         "send_written_notice",
+        "escalate_to_ombudsman",
         "escalate_to_ombudsman"
       ],
-      "best_score": 0.95,
-      "avg_score": 0.95,
+      "best_score": 0.6707,
+      "avg_score": 0.6599,
       "pass_rate": 1.0,
       "episodes_run": 3,
       "prohibited_actions": [],
@@ -57,11 +58,11 @@
     },
     "medium": {
       "best_sequence": [
+        "document_violations",
         "send_written_notice",
         "file_rbi_complaint",
         "escalate_to_ombudsman",
-        "document_violations",
-        "document_violations"
+        "escalate_to_ombudsman"
       ],
       "best_score": 0.95,
       "avg_score": 0.95,
@@ -81,11 +82,12 @@
         "negotiate_settlement",
         "document_violations",
         "file_rbi_complaint",
-        "escalate_to_ombudsman"
+        "escalate_to_ombudsman",
+        "negotiate_settlement"
       ],
-      "best_score": 0.95,
-      "avg_score": 0.95,
-      "pass_rate": 1.0,
+      "best_score": 0.7048,
+      "avg_score": 0.6701,
+      "pass_rate": 0.67,
       "episodes_run": 3,
       "prohibited_actions": [],
       "timing_rules": [
@@ -101,13 +103,13 @@
         "document_violations",
         "file_rbi_complaint",
         "document_violations",
-        "escalate_to_ombudsman",
+        "file_police_complaint",
         "document_violations",
         "escalate_to_ombudsman"
       ],
-      "best_score": 0.95,
-      "avg_score": 0.935,
-      "pass_rate": 0.67,
+      "best_score": 0.8417,
+      "avg_score": 0.827,
+      "pass_rate": 0.0,
       "episodes_run": 3,
       "prohibited_actions": [],
       "timing_rules": [

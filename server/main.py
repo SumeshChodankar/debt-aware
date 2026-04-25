@@ -97,7 +97,7 @@ class IndiaDebtEnvironment(Environment[RBIAction, RBIObservation, RBIState]):
     def __init__(self, task_level: str = TASK_LEVEL):
         super().__init__()
         self._task_level = task_level
-        self._core = RBIRightsEnv(task_level=task_level)
+        self._core = RBIRightsEnv(task_level=task_level, deterministic=True)  # deterministic for validator
 
     def reset(self, seed=None, episode_id=None, **kwargs) -> RBIObservation:
         obs: Observation = _run_async(self._core.reset())

@@ -1,0 +1,6 @@
+$env:PYTHONPATH = ".;./server"  
+python policy_trainer.py --episodes 3 --delay 6
+python inference.py 
+
+
+days expected to pay given by the lender. if they are thrratening the loan before 
