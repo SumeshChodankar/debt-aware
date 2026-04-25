@@ -6,3 +6,10 @@ uvicorn[standard]
 python-dotenv
 streamlit
 openenv-core>=0.2.0
+matplotlib
+peft
+transformers 
+torch 
+accelerate 
+huggingface_hub  
+safetensors   
